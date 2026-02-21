@@ -1,0 +1,25 @@
+[build]
+  command = "npm run build"
+  publish = ".next"
+
+[[plugins]]
+  package = "@netlify/plugin-nextjs"
+
+# Environment variables for the build (set actual values in Netlify dashboard)
+# ADMIN_EMAIL, ADMIN_PASSWORD, AUTH_TOKEN
+
+# Headers for caching static assets
+[[headers]]
+  for = "/_next/static/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/icon.png"
+  [headers.values]
+    Cache-Control = "public, max-age=86400"
+
+[[headers]]
+  for = "/apple-icon.png"
+  [headers.values]
+    Cache-Control = "public, max-age=86400"

@@ -1,0 +1,3 @@
+# SPA fallback — serve index.html for any route not matched by a static file
+# or a Netlify Function (API / SSR routes are handled by @netlify/plugin-nextjs)
+/*    /index.html   200
